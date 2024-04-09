@@ -4,6 +4,7 @@ import wixLocation from 'wix-location';
 
 $w.onReady(function () {
 $w("#socialDividerLabel").collapse(); 
+$w("#submit").label = "Log In"
 	// Write your Javascript code here using the Velo framework API
 
 	// Print hello world:
@@ -18,6 +19,7 @@ $w("#socialDividerLabel").collapse();
 
 export function submit_click(event) {
 	$w("#generalErrMsg").collapse(); 
+	$w("#submit").label = "Logging In..."
 
 	let email = $w("#email").value;
  	let password = $w("#password").value;
@@ -66,6 +68,7 @@ export function submit_click(event) {
    } )
 		.catch( (err) => {
 		console.log(err);
+		$w("#submit").label = "Log In"
 		$w("#generalErrMsg").expand(); 
 		$w("#submit").enable();  
 	} ); 
