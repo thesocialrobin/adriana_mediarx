@@ -3,7 +3,7 @@ import wixData from 'wix-data';
 import wixLocation from 'wix-location';
 
 $w.onReady(function () {
-
+$w("#socialDividerLabel").collapse(); 
 	// Write your Javascript code here using the Velo framework API
 
 	// Print hello world:
