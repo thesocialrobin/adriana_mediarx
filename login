@@ -42,8 +42,8 @@ export function submit_click(event) {
 			let item = items[0]
 			if (results.items.length > 0) {  
 				//redirects to member page
-				console.log("Member Found")
-			wixLocation.to(`/membersarea/${item.slug}/my-account`);
+				console.log("Member Found", item.slug)
+			wixLocation.to(`/members-area/${item.slug}/my-account`);
 													
 				} else {
 				//search Members database
@@ -56,7 +56,7 @@ export function submit_click(event) {
 					if (results.items.length > 0) {  
 						//redirects to member page
 						console.log("Found");
-					wixLocation.to(`/membersarea/${item.slug}/my-account`);
+					wixLocation.to(`/members-area/${item.slug}/my-account`);
 													}
 									})   	
 				}
